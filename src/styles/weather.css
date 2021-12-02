@@ -1,0 +1,288 @@
+:root
+{
+    --color1:#222;
+}
+
+.weather-container
+{
+    position: relative;
+    width: 100%;
+    padding-bottom:1rem ;
+
+}
+.open-form
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4rem;
+    height: 4rem;
+    background-color: white;
+    color: var(--color1);
+    border-radius: 50%;
+    margin: 1.5rem;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+}
+.form-container
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    background-color:rgba(255, 255, 255, 0.274);
+    backdrop-filter: blur(20px);
+    padding: 1.5rem;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 1px 0px 10px rgba(0,0,0,0.1);
+    transform-style:preserve-3d ;
+    transform: perspective(1000px);
+
+}
+.form-container form 
+{
+    display: flex;
+    flex-direction: column;
+
+}
+.form-container form div
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-container form label
+{
+    font-size: 3rem;
+    font-family: 'Pacifico', cursive;
+    color: var(--color1);
+}
+.form-container form input
+{
+    border: none;
+    outline: none;
+    width: 90%;
+    height: 5rem;
+    font-size: 3rem;
+    background-color: transparent;
+    border-bottom: 3px solid rgb(118, 186, 250);
+    margin-right: 0.5rem;
+    color: rgb(118, 186, 250);
+
+}
+.form-container form button
+{
+    border: none;
+    outline: none;
+    width: 3rem;
+    height:3rem;
+    background-color: rgb(118, 186, 250);
+    border-radius: 50%;
+    color: white;
+}
+.form-container .exit-form
+{
+    background: var(--color1);
+    border: none;
+    outline: none;
+    margin-top: 4rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: white;
+}
+.weather-container header
+{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+}
+.weather-container header img
+{
+    width: 3rem;
+    padding: 0.3rem;
+}
+.weather-container header h2
+{
+    font-family: 'Pacifico', cursive;
+    color: var(--color1);
+}
+.wheather-today
+{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.wheather-today-temperature
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    transform: perspective(1000px);
+    transform-style:preserve-3d;
+}
+.wheather-today .wheather-today-temperature img
+{
+    width: 20rem;
+}
+
+.wheather-today .wheather-today-temperature p
+{
+    font-family: 'Pacifico', cursive;
+    font-size: 4rem;
+    text-align: center;
+    line-height: 7rem;
+    transform: rotateY(-30deg);
+    color: var(--color1);
+}
+.wheather-today .wheather-today-temperature p span{
+    display: flex;
+    font-size: 10rem;
+    justify-content: center;
+}
+.wheather-today .wheather-today-temperature p span .icon-centigrade
+{
+    font-size: 2rem;
+}
+.wheather-today .wheather-today-status
+{
+    font-size: 2rem;   
+    font-weight: lighter;
+    color: var(--color1);
+}
+.wheather-today .weather-wind
+{
+    display: flex;
+    width: 10rem;
+    justify-content: space-between;
+    color: var(--color1);
+    margin-top: 1rem;
+}
+.wheather-today .weather-wind .item
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.wheather-today .weather-wind .item {
+    font-size: 3rem;
+}
+.wheather-today .weather-wind .item p{
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.wheather-today .forecast-cards
+{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top:2rem ;
+}
+
+.wheather-today .forecast-cards .card
+{
+    display: flex;
+    width: 10rem;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    color: var(--color1);
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 2rem;
+    margin: 0.5rem auto;
+}
+.wheather-today .forecast-cards .card img
+{
+    width: 5rem;
+    filter: drop-shadow(1px 1px 5px rgba(0,0,0,0.2));
+}
+.wheather-today .forecast-cards .card h4
+{
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+}
+.wheather-today .forecast-cards .card p{
+    font-size: 1.7rem;
+    font-weight: lighter;
+    display: flex;
+}
+.wheather-today .forecast-cards .card p .centigrade
+{
+    align-self: flex-start;
+    font-size: 0.5rem;
+}
+
+.error-container
+{
+    width: 100%;
+    height: calc(100vh - 7rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.error-container .icon{
+    font-size: 4rem;
+    color: var(--color1);
+}
+.error-container h2
+{
+    font-size: 3rem;
+    text-align: center;
+    padding: 1rem;
+    color: var(--color1);
+}
+
+@media only screen and (max-width: 600px) {
+    html
+    {
+        font-size: 13px;
+    }
+    .form-container
+    {
+        width: 100%;
+    }
+    .wheather-today .forecast-cards .card
+    {
+        width: 8rem;
+    }
+    .wheather-today .forecast-cards .card img
+    {
+        width: 4rem;
+    }
+    .wheather-today .forecast-cards .card h4
+    {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin: 0;
+    }
+    .wheather-today .forecast-cards .card p{
+        font-size: 1.4rem;
+        font-weight: 500;
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 320px)
+{
+    html
+    {
+        font-size: 10px;
+    }
+}
